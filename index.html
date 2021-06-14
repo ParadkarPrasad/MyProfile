@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e25b852c87.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+
+  <style>
+  *{
+    margin: 0;
+  }
+   body{
+      margin: 0;
+      
+      
+   }
+    header {
+     background-color: #4F618A;
+    }
+
+    .container{
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+      
+    }
+    .container-nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul{
+      list-style: none;
+      display: flex;
+      padding: 1rem;
+    }
+
+    .title{
+      margin: 5px 15px;
+    }
+    .title img {
+    height: 60px;
+    margin: 3px 5px;
+    cursor: pointer;
+    }
+    nav li{
+      margin-left: 2em;
+      position: relative; 
+    }
+
+    nav li::after{
+      content: "";
+      height: 3px;
+      width: 0;
+      background: #1792d2;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.5s;
+    }
+
+    nav li:hover::after{
+      width: 100%;
+    }
+
+    nav a{
+      text-decoration: none;
+      padding: .25em;
+      font-weight: 700;
+      color: #707070;
+      text-transform: uppercase;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #1792d2;
+    }
+
+    /**********HOME***********/
+ #home{
+   background: url("https://cdn.pixabay.com/photo/2016/11/30/20/58/programming-1873854__340.png")no-repeat center center/cover;
+   height: 100vh;
+ }
+
+ .container-2{
+   max-width: 900px;
+   margin: 0 auto;
+   width: 90%;
+ }
+ .container-2 h1{
+  text-align: center;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  padding: 1rem;
+ }
+.container-2 p{
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+}
+
+/**********PROJECT*************/
+
+#services{
+  background-color: #d8be8a;
+}
+.container-3{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+#services h1{
+  text-align: center;
+  color: #565656;
+  margin-top: 0px;
+  padding-bottom: 15px;
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+}
+#services h1::before{
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 2px;
+  background-color: #565656;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+#services h1::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #565656;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50% ,50%) rotate(45deg);
+}
+.service-cards-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.service-card{
+  flex: 1 1 250px;
+  max-width: 250px;
+  margin: 30px 15px;
+  text-align: center;
+  background-color: #fff;
+  color: #565656;
+  padding: 50px 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0, 0.3);
+  position: relative;
+}
+.service-card .icon-container{
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50% ,-50%) rotate(45deg);
+}
+.service-card .icon-container i{
+  transform: rotate(-45deg);
+}
+.service-card  h2 {
+  font-size: 20px;
+}
+.service-card p{
+  font-size: 12px;
+  margin: 15px 0 25px;
+  line-height: 1.6;
+}
+.service-card button{
+  padding: 10px 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: rgba(0,0,0,0.8);
+  border: 1px solid transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+
+}
+.service-card button:hover{
+  color: #565656;
+  background-color: transparent;
+  border: 1px solid #565656;
+}
+
+/*************SKILLS**************/
+
+#skills{
+  background-color: rgb(235, 224, 224);
+}
+.container-4{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+#skills h1{
+  text-align: center;
+  color: #565656;
+  margin-top: 0px;
+  padding-bottom: 15px;
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+}
+#skills h1::before{
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 2px;
+  background-color: #565656;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#skills h1::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #565656;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50% ,50%) rotate(45deg);
+}
+ .container-5{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   grid-gap: 1rem;
+   padding: 1rem 80px;
+   font-size: 1.2rem;
+   
+ }
+ .skill-box{
+   padding: 1rem;
+   color: #ddd;
+   cursor: pointer;
+ }
+ .skill-box:hover > .skill-title:after, .skill-box:hover > .skill-title:before{
+  width: 35px;
+
+ }
+ .skill-box:hover .img{
+   transform: translateY(-10px);
+ }
+ .skill-title{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 0.5rem;
+   margin-bottom: 0.5rem;
+   position: relative;
+ }
+
+
+.skill-title:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: #2ecc71;
+  transition: .5s;
+}
+.skill-title:before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  background-color: #2ecc71;
+  transition: .5s;
+}
+
+
+ .img{
+   width: 90px;
+   height: 90px;
+   position: relative;
+   border-radius: 45px;
+   background-color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: .5s;
+
+ }
+ .img:after{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+  width: 50%;
+  height: 90px;
+  background: rgba(100,100,100,0.5);
+  border-radius: 45px 0 0 45px;
+  
+  }
+ .skill-title h3{
+   color: black;
+   margin-top: 0.8rem;
+   font-family: 'Anton', sans-serif;
+ }
+
+ .skill-icon{
+   width: 50px;
+   z-index: 2;
+
+ }
+ @media  screen and (max-width: 990px) {
+   .container-5{
+     grid-template-columns: repeat(2,1fr);
+     padding: 2rem 50px;
+   }
+ }
+
+ @media  screen and (max-width: 650px) {
+  .container-5{
+    grid-template-columns: 1fr;
+  }
+}
+
+/**************FOOTER************/
+footer{
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #f12020;
+  top: -10px;
+}
+.left .content p{
+  text-align: justify;
+  color: white;
+}
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+.left .content .social a{
+  padding: 0 2px;
+}
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: #4fc3f7;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover{
+  background: #f12020;
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  color: white;
+}
+.center .content .fas:hover{
+  background: #f12020;
+}
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+  color: white;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: white;
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+  color: white;
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: #3498db;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn{
+  margin-top: 10px;
+}
+.right form .btn button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f12020;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+.right form .btn button:hover{
+  background: #fff;
+}
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span{
+  color: white;
+}
+.bottom center a{
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
+
+    @media (max-width:600px){
+      .container-nav{
+        flex-direction: column;
+      }
+      header{
+        text-align: center;
+      }
+     
+      nav ul{
+        flex-direction: column;
+      }
+      nav li{
+        margin: .5em ;
+      }
+    }
+  
+    
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="container container-nav">
+    <div class="title">
+      <img src="https://i.imgur.com/dt7RFlj.png" alt="">
+    </div>
+
+    <nav>
+      <ul class="list">
+        <li class="item-list"><a href="#banner">Home</a></li>
+        <li class="item-list"><a href="#services">Projects</a></li>
+        <li class="item-list"><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+
+  <section id="home">
+    <div class="container-2">
+      <h1>Prasad Paradkar</h1>
+      <p>Front End Developer</p>
+    </div>
+  </section>
+
+
+  <section id="services">
+    <div class="container-3">
+      <h1>Projects</h1>
+      <div class="service-cards-wrapper">
+        <div class="service-card">
+          <div class="icon-container">
+           <i class="fas fa-chart-bar"></i>
+          </div>
+          <h2>Employee</h2>
+          <p>Employee Churn prediction using data mining techniques and comparing various algorithms.</p>
+          <button>Read More</button>
+         </div>
+
+         <div class="service-card">
+          <div class="icon-container">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h2> Delivery</h2>
+          <p>Employee Churn prediction using data mining techniques and comparing various algorithms.</p>
+          <button>Read More</button>
+         </div>
+
+         <div class="service-card">
+          <div class="icon-container">
+            <i class="fab fa-android"></i>
+          </div>
+          <h2>Android</h2>
+          <p>Employee Churn prediction using data mining techniques and comparing various algorithms.</p>
+          <button>Read More</button>
+         </div>
+
+         <div class="service-card">
+          <div class="icon-container">
+            <i class="fas fa-door-open"></i>
+          </div>
+          <h2>IOT</h2>
+          <p>Employee Churn prediction using data mining techniques and comparing various algorithms.</p>
+          <button>Read More</button>
+         </div>
+   </div>
+ </div>
+</section>
+
+<section id="skills">
+  <div class="container-4">
+    <h1>Skills</h1>
+   
+    <div class="container-5">
+      <div class="skill-box">
+        <div class="skill-title">
+          <div class="img">
+            <img src="https://i.postimg.cc/L62x9QQZ/html.png" alt="" class="skill-icon">
+          </div>
+          <h3>HTML 5</h3>
+        </div>
+      </div>
+
+      <div class="skill-box">
+       <div class="skill-title">
+         <div class="img">
+           <img src="https://i.postimg.cc/8cDmCs4V/css.png" alt="">
+         </div>
+         <h3>CSS 3</h3>
+       </div>
+     </div>
+
+     <div class="skill-box">
+       <div class="skill-title">
+         <div class="img">
+           <img src="https://i.postimg.cc/RVpKkgkm/js.png" alt=""class="skill-icon">
+         </div>
+         <h3>JavaScript</h3>
+       </div>
+     </div>
+
+     <div class="skill-box">
+       <div class="skill-title">
+         <div class="img">
+           <img src="https://i.postimg.cc/65qGfdym/php.png" alt=""class="skill-icon">
+         </div>
+         <h3>PHP</h3>
+       </div>
+     </div>
+
+     <div class="skill-box">
+       <div class="skill-title">
+         <div class="img">
+           <img src="https://i.postimg.cc/jdBC6BVD/react.png" alt=""class="skill-icon">
+         </div>
+         <h3>React JS</h3>
+       </div>
+     </div>
+
+     <div class="skill-box">
+       <div class="skill-title">
+         <div class="img">
+           <img src="https://i.postimg.cc/y89xLnBv/mysql.png" alt=""class="skill-icon">
+         </div>
+         <h3>MySQL</h3>
+       </div>
+     </div>
+    </div>
+   </div>
+</section>
+
+<footer>
+  <div class="main-content">
+    <div class="left box">
+      <h2>About Me</h2>
+      <div class="content">
+        <p>Hello, myself Prasad Paradkar graduated from IT background.A front-end developer looking for opportunities and to learn more.Motivated designer and developer with experience creating custom websites with ReactJs, JavaScript, HTML5, and CSS3.</p>
+        <div class="social">
+          <a href="https://github.com/ParadkarPrasad"><span class="fab fa-github"></span></a>
+          <a href="https://twitter.com/prasadparad37"><span class="fab fa-twitter"></span></a>
+          <a href="https://www.instagram.com/paradkar_prasad/"><span class="fab fa-instagram"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="center box">
+      <h2>Address</h2>
+      <div class="content">
+        <div class="place">
+          <span class="fas fa-map-marker-alt"></span>
+          <span class="text">Mumbai, Maharashtra</span>
+        </div>
+        <div class="phone">
+          <span class="fas fa-phone-alt"></span>
+          <span class="text">+91 9999335678</span>
+        </div>
+        <div class="email">
+          <span class="fas fa-envelope"></span>
+          <span class="text">prasadparad37@gmail.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="right box">
+      <h2>Get In Touch</h2>
+      <div class="content">
+        <form action="#">
+          <div class="email">
+            <div class="text">Email *</div>
+            <input type="email" required>
+          </div>
+          <div class="msg">
+            <div class="text">Message *</div>
+            <textarea rows="2" cols="25" required></textarea>
+          </div>
+          <div class="btn">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <center>
+      <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+    </center>
+  </div>
+</footer>
+</body>
+</html>
